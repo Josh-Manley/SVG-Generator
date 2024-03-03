@@ -4,7 +4,7 @@
   # SVG-Generator
   <a id="description"></a>
   ## Description
-  An app that runs in the command-line that generates an SVG from given promps
+  An app that runs in the command-line that generates an SVG from given prompts
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
