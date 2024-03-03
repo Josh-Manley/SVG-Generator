@@ -19,7 +19,7 @@
   To install dependencies type "npm init", "npm i --save inquirer@^8.2.4" and "npm i --save-dev jest"
   <a id="usage"></a>
   ## Usage
-  open index.js terminal and type "node index"
+  Open index.js terminal and type "node index"
   <a id="license"></a>
   ## License
   Check license file for license info
