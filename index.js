@@ -22,7 +22,7 @@ const shapeQuestion = [{
 },
 {
     type: 'input',
-    message: 'What text would you like in your SVG?',
+    message: 'What text would you like in your SVG? (recommended 3 characters for best results)',
     name: 'shapeText'
 },
 {
@@ -51,21 +51,23 @@ function addShape() {
              newShape = new Square(answer.shapeColor);
         } else {
              newShape = new Triangle(answer.shapeColor);
+
         }
 
         newShape.setColor(answer.shapeColor);
         const shapeElement = newShape.render();
+        const shapeText = newShape.textAttribute();
 
         const svgData =
             `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
-${shapeElement}
+            ${shapeElement}
 
-<text x="150" y="150" font-size="60" text-anchor="middle" fill="${answer.shapeTextColor}">${answer.shapeText}</text>
+            <text ${shapeText} font-size="60" text-anchor="middle" fill="${answer.shapeTextColor}">${answer.shapeText}</text>
 
-</svg>`;
+            </svg>`;
 
-        fs.writeFileSync('logo.svg', svgData);
+            fs.writeFileSync('logo.svg', svgData);
 
     })
 }
