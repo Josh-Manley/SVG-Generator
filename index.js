@@ -39,6 +39,11 @@ const shapeQuestion = [{
     type: 'input',
     message: 'Type a "Y" coordinate for text',
     name: 'textYlocation'
+},
+{
+    type: 'input',
+    message: 'Type text font size',
+    name: 'textFontSize'
 }
 ]
 
@@ -73,7 +78,7 @@ function addShape() {
 
             ${shapeElement}
 
-            <text x="${answer.textXlocation}" y="${answer.textYlocation}" font-size="60" text-anchor="middle" fill="${answer.shapeTextColor}">${answer.shapeText}</text>
+            <text x="${answer.textXlocation}" y="${answer.textYlocation}" font-size="${answer.textFontSize}" text-anchor="middle" fill="${answer.shapeTextColor}">${answer.shapeText}</text>
 
             </svg>`;
 
