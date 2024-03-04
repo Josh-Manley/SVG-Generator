@@ -9,7 +9,7 @@ const startAppQuestion = {
     name: 'startChoice'
 }
 
-const shapeQuestion = [{
+const svgQuestions = [{
     type: 'list',
     message: 'What shape would you like to add?',
     choices: ['Circle', 'Square', 'Triangle'],
@@ -56,7 +56,7 @@ inquirer.prompt(startAppQuestion).then((answer) => {
     } else { return }
 })
 function addShape() {
-    inquirer.prompt(shapeQuestion).then((answer) => {
+    inquirer.prompt(svgQuestions).then((answer) => {
 
         //console.log(answer);
         let newShape;
