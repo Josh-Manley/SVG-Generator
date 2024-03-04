@@ -1,9 +1,10 @@
 {
   "name": "svg-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)   <a id=\"title\"></a>   # SVG-Generator   <a id=\"description\"></a>   ## Description   An app that runs in the command-line that generates an SVG from given prompts   ## Table of Contents   * [Description](#description)   * [Installation](#installation)   * [Usage](#usage)   * [License](#license)   * [Contributing](#contributing)   * [Tests](#tests)   * [Questions](#questions)",
   "main": "index.js",
   "directories": {
+    "example": "example",
     "lib": "lib"
   },
   "scripts": {

@@ -2,11 +2,11 @@ const inquirer = require("inquirer");
 const { Square, Circle, Triangle } = require("./lib/shapes.js");
 const fs = require("fs");
 
-const initialQuestion = {
+const startAppQuestion = {
     type: 'list',
     message: 'What would you like to do?',
     choices: ['Add Shape', 'Exit'],
-    name: 'initialChoice'
+    name: 'startChoice'
 }
 
 const shapeQuestion = [{
@@ -47,9 +47,9 @@ const shapeQuestion = [{
 }
 ]
 
-inquirer.prompt(initialQuestion).then((answer) => {
+inquirer.prompt(startAppQuestion).then((answer) => {
     //console.log(answer);
-    if (answer.initialChoice === 'Add Shape') {
+    if (answer.startChoice === 'Add Shape') {
 
         addShape();
 
