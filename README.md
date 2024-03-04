@@ -17,6 +17,12 @@
   <a id="installation"></a>
   ## Installation
   To install dependencies type "npm init", "npm i --save inquirer@^8.2.4" and "npm i --save-dev jest"
+  ## Link to video
+  https://screenrec.com/share/qkIL3rOUc7
+  ## Visuals
+  <img width="1710" alt="Screenshot 2024-03-04 at 2 27 47 PM" src="https://github.com/Josh-Manley/SVG-Generator/assets/150214190/2aaf6b51-e076-4660-a625-3e533507b989">
+  <img width="1710" alt="Screenshot 2024-03-04 at 2 24 57 PM" src="https://github.com/Josh-Manley/SVG-Generator/assets/150214190/27ca4d4a-0148-4988-9e6c-c5d3557ac234">
+  
   <a id="usage"></a>
   ## Usage
   Open index.js terminal and type "node index"
