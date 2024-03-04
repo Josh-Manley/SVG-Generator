@@ -83,5 +83,6 @@ function addShape() {
             </svg>`;
 
             fs.writeFileSync('logo.svg', svgData);
+            console.log("Generated logo.svg");
     })
 }
