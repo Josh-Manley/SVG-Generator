@@ -17,6 +17,8 @@
   <a id="installation"></a>
   ## Installation
   To install dependencies type "npm init", "npm i --save inquirer@^8.2.4" and "npm i --save-dev jest"
+  ## Link to video
+  https://screenrec.com/share/qkIL3rOUc7
   <a id="usage"></a>
   ## Usage
   Open index.js terminal and type "node index"
