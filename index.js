@@ -5,7 +5,7 @@ const fs = require("fs");
 const startAppQuestion = {
     type: 'list',
     message: 'What would you like to do?',
-    choices: ['Add Shape', 'Exit'],
+    choices: ['Create SVG', 'Exit'],
     name: 'startChoice'
 }
 
@@ -49,7 +49,7 @@ const shapeQuestion = [{
 
 inquirer.prompt(startAppQuestion).then((answer) => {
     //console.log(answer);
-    if (answer.startChoice === 'Add Shape') {
+    if (answer.startChoice === 'Create SVG') {
 
         addShape();
 
