@@ -1,14 +1,16 @@
+// all required dependencies 
 const inquirer = require("inquirer");
 const { Square, Circle, Triangle } = require("./lib/shapes.js");
 const fs = require("fs");
 
+//question for deciding to start application or exit
 const startAppQuestion = {
     type: 'list',
     message: 'What would you like to do?',
     choices: ['Create SVG', 'Exit'],
     name: 'startChoice'
 }
-
+// question prompts for svg attributes
 const svgQuestions = [{
     type: 'list',
     message: 'What shape would you like to add?',
@@ -46,7 +48,7 @@ const svgQuestions = [{
     name: 'textFontSize'
 }
 ]
-
+// code for starting app or exiting based on user answer
 inquirer.prompt(startAppQuestion).then((answer) => {
     //console.log(answer);
     if (answer.startChoice === 'Create SVG') {
@@ -55,10 +57,10 @@ inquirer.prompt(startAppQuestion).then((answer) => {
 
     } else { return }
 })
+// code for choosing which shape to use and color of shape for svg based on user answer
 function addShape() {
     inquirer.prompt(svgQuestions).then((answer) => {
 
-        //console.log(answer);
         let newShape;
 
         if (answer.shapeChoice === 'Circle') {
@@ -71,8 +73,8 @@ function addShape() {
 
         newShape.setColor(answer.shapeColor);
         const shapeElement = newShape.render();
-        // const shapeText = newShape.textAttribute();
 
+        // data for new file from answers given by user input
         const svgData =
             `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
@@ -81,7 +83,7 @@ function addShape() {
             <text x="${answer.textXlocation}" y="${answer.textYlocation}" font-size="${answer.textFontSize}" text-anchor="middle" fill="${answer.svgTextColor}">${answer.svgText}</text>
 
             </svg>`;
-
+        //code to write new file with file name and a variable of data to put into file
             fs.writeFileSync('logo.svg', svgData);
             console.log("Generated logo.svg");
     })
