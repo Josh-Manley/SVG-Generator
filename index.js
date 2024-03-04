@@ -23,12 +23,12 @@ const svgQuestions = [{
 {
     type: 'input',
     message: 'What text would you like in your SVG? (recommended 3 characters for best results)',
-    name: 'shapeText'
+    name: 'svgText'
 },
 {
     type: 'input',
     message: 'What color would you like the text to be?',
-    name: 'shapeTextColor'
+    name: 'svgTextColor'
 },
 {
     type: 'input',
@@ -78,7 +78,7 @@ function addShape() {
 
             ${shapeElement}
 
-            <text x="${answer.textXlocation}" y="${answer.textYlocation}" font-size="${answer.textFontSize}" text-anchor="middle" fill="${answer.shapeTextColor}">${answer.shapeText}</text>
+            <text x="${answer.textXlocation}" y="${answer.textYlocation}" font-size="${answer.textFontSize}" text-anchor="middle" fill="${answer.svgTextColor}">${answer.svgText}</text>
 
             </svg>`;
 
